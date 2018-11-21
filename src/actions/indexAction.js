@@ -1,6 +1,7 @@
 import {ADD_MOVIE, FETCH_MOVIE, FETCH_FAILED, FETCH_SUCCESS} from './actionTypes'
 
 export const fetchMovieAction = (sort) =>{
+    console.log('this fetch action...')
     return {
         type: FETCH_MOVIE,
         sort

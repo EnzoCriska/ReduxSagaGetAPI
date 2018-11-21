@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import MovieConponent from '../components/movieComponent'
+import MovieComponent from '../components/movieComponent'
 import {fetchMovieAction} from '../actions/indexAction'
 import {addMovieAction} from '../actions/indexAction'
 
@@ -12,14 +12,15 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onFetchMovie: (sort) =>{
+            console.log('dispatch...')
             dispatch(fetchMovieAction(sort));
         },
 
         onAddMovie: (newMovie) => {
             dispatch(addMovieAction(newMovie));
-        }
+        },
     }
 }
 
-const MovieContainer = connect(mapDispatchToProps, mapStateToProps)(MovieConponent);
+const MovieContainer = connect(mapStateToProps, mapDispatchToProps)(MovieComponent);
 export default MovieContainer;
