@@ -1,6 +1,7 @@
-import { call, all } from "redux-saga/effects";
+import { fork} from "redux-saga/effects";
 import { watchFetchMovies } from "./movieSagas";
-
+import { watchAddNewMovies} from './movieSagas'
 export default function* rootSaga(){
-    yield call (watchFetchMovies);
+    yield [fork (watchFetchMovies),
+            fork (watchAddNewMovies)];
 };

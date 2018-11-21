@@ -10,7 +10,7 @@
       "name": "A Christmas Carol",
       "id": 2
     },
-    {      
+    {
       "id": 3,
       "name": "Star Wars",
       "releaseYear": "1977"
@@ -20,7 +20,7 @@
       "name": "Back to the Future",
       "releaseYear": 1985
     },
-    {      
+    {
       "id": 5,
       "name": "The Matrix",
       "releaseYear": 1999
@@ -109,6 +109,11 @@
       "id": 22,
       "name": "The Amityville Horror",
       "releaseYear": 1979
+    },
+    {
+      "name": "my movie",
+      "releaseYear": "2017",
+      "id": 23
     }
   ],
   "comments": [
@@ -127,4 +132,3 @@
     "name": "typicode"
   }
 }
- 

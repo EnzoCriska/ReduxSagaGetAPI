@@ -26,6 +26,7 @@ export default class MovieComponent extends Component {
                         onChangeText = {(text) => this.setState({releaseYear: text})}
                         value={this.state.releaseYear}
                         placeholder= 'releaseYear'
+                        keyboardType= 'numeric'
                     />
                 </View>
                 <View style={{height: 70, flexDirection: 'row'}}>
@@ -40,7 +41,12 @@ export default class MovieComponent extends Component {
                         containerStyle= {{padding: 10, margin: 10, width: 150, height: 45, borderRadius: 50, backgroundColor: 'green'}}
                         style = {{fontSize: 18, color: 'white'}}
                         onPress={() =>{ 
-                            // this.props.onAddMovie()
+                            const {movieName, releaseYear} = this.state;
+                            if (!movieName.length || !releaseYear.length){
+                                alert('you need type to movieName and releaseYear');
+                                return;
+                            }
+                            this.props.onAddMovie({name: movieName, releaseYear: releaseYear});
                         }}
                     > Add Movie</Button>
                 </View>

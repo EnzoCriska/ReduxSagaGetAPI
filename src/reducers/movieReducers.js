@@ -5,10 +5,10 @@ const MovieReducer = ( movies =[], action)   => {
             return []
         case FETCH_SUCCESS:
             return action.receiverMovies;
-        case ADD_MOVIE:
-            return [
-                ...movies, action.newMovie
-            ];
+        // case ADD_MOVIE:
+        //     return [
+        //         ...movies, action.newMovie
+        //     ];
         default:
         return movies   
     }
