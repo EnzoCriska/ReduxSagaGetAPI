@@ -5,7 +5,7 @@ import {addMovieAction} from '../actions/indexAction'
 
 const mapStateToProps = (state) => {
     return {
-        movie: state.movieReducers
+        movies: state.MoviesReducer
     }
 }
 

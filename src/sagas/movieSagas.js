@@ -6,7 +6,7 @@ function* fetchMovies(){
     try {
         console.log("fetchMovies start ...")
         const receiverMovies = yield Api.getMoviesFromApi();
-        console.log(receiverMovies.size());
+        // console.log(receiverMovies[0]);
         yield put({type: FETCH_SUCCESS, receiverMovies : receiverMovies});
     } catch (error) {
         yield put({type: FETCH_FAILED, error})

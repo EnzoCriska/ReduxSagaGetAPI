@@ -50,7 +50,9 @@ export default class MovieComponent extends Component {
                         }}
                     > Add Movie</Button>
                 </View>
+                {console.log(this.props.movies)}
                 <FlatList
+
                     data={this.props.movies}
                     keyExtractor= {(item)=> item.name}
                     renderItem={({item, index}) => <Text 

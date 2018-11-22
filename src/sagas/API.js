@@ -1,5 +1,5 @@
-const urlGetMovies = 'http://localhost:3000/movies';
-const urlPostMovies = 'http://localhost:3000/movies';
+const urlGetMovies = 'http://www.mocky.io/v2/5bf6034630000031407bc07e';
+const urlPostMovies = 'http://www.mocky.io/v2/5bf6034630000031407bc07e';
 
 function* getMoviesFromApi() {
     const response = yield fetch(urlGetMovies, {
@@ -10,13 +10,11 @@ function* getMoviesFromApi() {
         },
         body: '',
     });
-    console.log(response);
+    console.log(response.status);
     
-    if (response.status === 200){
-        const movies = yield JSON.parse(response._bodyInit);
-        console.log(movies);
-        return movies;
-    }else return [];
+    const movies = yield response.status === 200 ? JSON.parse(response._bodyInit) : [];
+
+    return movies;
 }
 
 
